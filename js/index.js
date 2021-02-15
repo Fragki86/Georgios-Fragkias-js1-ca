@@ -1,5 +1,4 @@
-
-const logo = document.querySelector(".logo-container");
+const container = document.querySelector(".main-container");
 const team = document.querySelector(".team-container");
 const yearFormed = document.querySelector(".year-formed--container");
 
@@ -13,35 +12,23 @@ async function getPremierLeague() {
         const response = await fetch(API_call);
         const results = await response.json();
         const allTeams = results.teams;
-        logo.innerHTML = "";
+        container.innerHTML = "";
         
 
       for (let i = 0; i < allTeams.length; i++) {
             const teamName = allTeams[i].strTeam;
-            const badges = allTeams[i].strTeamBadges;
+            const badges = allTeams[i].strTeamBadge;
             const foundationYear = allTeams[i].intFormedYear;
-            logo.innerHTML += `<div>
+            container.innerHTML += `<div class="divs-index">
                                 <h4>${teamName}</h4>
-                                <p>${foundationYear}</p>
-                                <img src="${badges}>`;
-
-
-        console.log(allTeams[i]);
+                                <img class="badges" src="${badges}"> 
+                                <p>Est: ${foundationYear}</p>
+                               </div>`;
       }
-        
-
-        
-        console.log(allTeams.length);
-
-
-
-
-
-
-
-
     } catch(error) {
         console.log(error)
+        container.innerHTML = "Something went wrong and we lost the ball..!!"
+        
     }
 }
 
