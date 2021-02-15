@@ -1,0 +1,48 @@
+body {
+    width: 90%;
+    background-color: rgb(235, 226, 226);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+
+div {
+    width: 90%;
+    height: 60px;
+    display: block;
+    background-color: white;
+}
+
+
+
+.loader {
+    display: none;
+    border: 4px solid darkgrey;
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    animation: fill 3s linear infinite;
+}
+
+@keyframes fill {
+    0% {top: 30px;
+        background-color: darkblue;}
+    100% {background-color: red;}
+}
+
+.loader p {
+  font-size: 3rem;
+  color: white;
+  margin: 20px 30px;
+}
