@@ -3,13 +3,14 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 
-const id = params.get("idTeam");
+
+const id = params.get("id");
 
 console.log(id);
 
-// console.log(params);
 
-const teamDetailsURL = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League/" + id;
+
+const teamDetailsURL = "https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=" + id;
 
 console.log(teamDetailsURL);
 
@@ -18,9 +19,9 @@ async function getTeamDetails() {
     try {
         const response = await fetch(teamDetailsURL);
         const detailedInfo = await response.json();
-
+    
         detailsContainer.innerHTML = "";
-        console.log(detailedInfo);
+        console.log(detailedInfo.teams[0]);
         
 
         newDetails(detailedInfo);
@@ -33,5 +34,13 @@ getTeamDetails();
 
 
 function newDetails(detailedInfo) {
-    detailsContainer.innerHTML = `<h1>${detailedInfo.strTeam}</h1>`;
+    detailsContainer.innerHTML = `<div class="div-details">
+                                    <img class="badges" src="${detailedInfo.teams[0].strTeamBadge}">
+                                    <h1>${detailedInfo.teams[0].strTeam}</h1>
+                                    <p><span class="stadium">Stadium:</span> ${detailedInfo.teams[0].strStadium}, ${detailedInfo.teams[0].intStadiumCapacity} seats</p>
+                                    <img class="stadium-photo" src="${detailedInfo.teams[0].strStadiumThumb}">
+                                    <h2>Description</h2>
+                                    <p>${detailedInfo.teams[0].strDescriptionEN}</p>
+                                    <p>Teams website: ${detailedInfo.teams[0].strWebsite}</p>
+                                  </div>`;
 }
