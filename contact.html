@@ -15,25 +15,39 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="contact-page">
+    
         <!-- <div class="loader">
             <p>Loading...</p>
         </div> -->
-    <form class="contact-form">
-        <label>
-            <input>
-        </label>
-        <label>
-            <input>
-        </label>
-        <label>
-            <input>
-        </label>
-        <label>
-            <input>
-        </label>
+        <div id="success-message">Your message is sent!!</div>
+    <form id="contact-form">
+        <div>
+            <label>Name (minimum 3 characters)
+                <input type="text" name="name" id="name">
+            </label>
+            <div class="form-error" id="nameError">Please enter a valid name</div>
+        </div>
+        <div> 
+            <label>Email
+                <input type="email" name="email" id="email">
+            </label>
+            <div class="form-error" id="emailError">Please enter an email address</div>
+        </div>
+        <div>
+            <label>Address
+                <input type="text" name="address" id="address">
+            </label>
+            <div class="form-error" id="addressError">Please enter an address</div>
+        </div>
+        <div>
+            <label>Subject (minimum 40 characters)
+                <input type="text" name="subject" id="subject">
+            </label>
+            <div class="form-error" id="subjectError">Please add text</div>
+        </div>
+        <button disabled>Submit</button>
     </form>
-    </div>
+   
 
 
     <script src="js/contact.js"></script>
