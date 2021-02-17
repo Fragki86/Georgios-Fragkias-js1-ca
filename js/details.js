@@ -35,8 +35,10 @@ getTeamDetails();
 
 function newDetails(detailedInfo) {
     detailsContainer.innerHTML = `<div class="div-details">
+                                    <div>
                                     <img class="badges" src="${detailedInfo.teams[0].strTeamBadge}">
                                     <h1>${detailedInfo.teams[0].strTeam}</h1>
+                                    </div>
                                     <p><span class="stadium">Stadium:</span> ${detailedInfo.teams[0].strStadium}, ${detailedInfo.teams[0].intStadiumCapacity} seats</p>
                                     <img class="stadium-photo" src="${detailedInfo.teams[0].strStadiumThumb}">
                                     <h2>Description / History</h2>
