@@ -39,7 +39,7 @@ function newDetails(detailedInfo) {
                                     <h1>${detailedInfo.teams[0].strTeam}</h1>
                                     <p><span class="stadium">Stadium:</span> ${detailedInfo.teams[0].strStadium}, ${detailedInfo.teams[0].intStadiumCapacity} seats</p>
                                     <img class="stadium-photo" src="${detailedInfo.teams[0].strStadiumThumb}">
-                                    <h2>Description</h2>
+                                    <h2>Description / History</h2>
                                     <p>${detailedInfo.teams[0].strDescriptionEN}</p>
                                     <p>Teams website: ${detailedInfo.teams[0].strWebsite}</p>
                                   </div>`;
