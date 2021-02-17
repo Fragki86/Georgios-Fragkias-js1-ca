@@ -43,4 +43,15 @@ function newDetails(detailedInfo) {
                                     <p>${detailedInfo.teams[0].strDescriptionEN}</p>
                                     <p>Teams website: ${detailedInfo.teams[0].strWebsite}</p>
                                   </div>`;
+
+
+
+    const updatedTitle = document.querySelector("title")
+
+    function pageTitleUpdate() {
+        updatedTitle.innerHTML = detailedInfo.teams[0].strTeam;
+    }
+    pageTitleUpdate();
 }
+
+console.dir(document)

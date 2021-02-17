@@ -20,9 +20,9 @@
             <p>Loading...</p>
         </div> -->
         <div id="success-message">Your message is sent!!</div>
-    <form id="contact-form">
+    <form id="contact-form" method="POST">
         <div>
-            <label>Name (minimum 3 characters)
+            <label>Full Name (minimum 3 characters)
                 <input type="text" name="name" id="name">
             </label>
             <div class="form-error" id="nameError">Please enter a valid name</div>
@@ -40,7 +40,7 @@
             <div class="form-error" id="addressError">Please enter an address</div>
         </div>
         <div>
-            <label>Subject (minimum 40 characters)
+            <label>Subject (minimum 20 characters)
                 <input type="text" name="subject" id="subject">
             </label>
             <div class="form-error" id="subjectError">Please add text</div>

@@ -1,3 +1,5 @@
+/* -------------------------- Global --------------------------------*/
+
 body {
     width: 100%;
     background-color: rgb(235, 226, 226);
@@ -30,6 +32,13 @@ nav a {
     color:black;
 }
 
+
+
+
+
+
+/* -------------------------- Home Page --------------------------------*/
+
 .divs-index {
     margin: 25px auto;
     width: 40%;
@@ -54,6 +63,72 @@ nav a {
     display: block;
     margin: auto auto;
 }
+
+
+
+
+
+/* -------------------------- Contact --------------------------------*/
+
+form {
+    width: 60%;
+    background-color: rgb(235, 231, 231);
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 30px;
+}
+
+form div {
+    padding-bottom: 5px;
+}
+
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    
+}
+
+input {
+    display: block;
+    border-radius: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-error {
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.6rem;
+    color: red;
+    padding-top: 1px;
+}
+
+button {
+    background-color: rgb(52, 91, 136);
+    color: white;
+    margin: 0px auto;
+}
+
+button:disabled {
+    color: black;
+}
+
+#success-message {
+    display: none;
+    text-align: center;
+    width: 65%;
+    margin: 50px auto 15px auto;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(54, 179, 54);
+    color: white;
+    font-weight: 500;
+}
+
+
+
 
 
 
