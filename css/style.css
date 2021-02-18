@@ -70,12 +70,13 @@ nav a {
     width: 170px;
     height: 170px;
     display: block;
-    background: radial-gradient(circle 90px, #ffffff, #dddada);
+    background: radial-gradient(circle, rgba(255,255,255,1) 16%, rgba(184,183,203,1) 81%, rgba(117,63,157,1) 100%);
     box-shadow: 0px 0px 12px  white;
     border-radius: 170px;
     border: solid 1px silver;
     text-decoration: none;
 }
+
 
 .divs-index h4 {
     text-align: center;
@@ -204,21 +205,20 @@ button:hover {
 .loader {
     display: block;
     margin: 100px auto;
-    border: 14px solid white;
-    border-top: 14px solid var(--purple);
-    border-bottom: 14px solid var(--purple);
-    border-radius: 250px;
-    width: 170px;
-    height: 170px;
+    border: 10px solid white;
+    border-top: 10px solid var(--purple);
+    border-bottom: 10px solid var(--purple);
+    border-radius: 170px;
+    box-shadow: 0px 0px 10px white;
+    width: 100px;
+    height: 100px;
     animation: fill 3s linear infinite;
 }
 
 
 @keyframes fill {
-    0% {background-color: rgb(50, 41, 54);
-            transform: rotate(0deg)}
-    100% {background-color: rgb(233, 221, 238);
-        transform: rotate(360deg)}
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
 }
 
 .loader p {
