@@ -12,10 +12,10 @@ const success = document.querySelector("#success-message");
 
 
 form.addEventListener("submit", formValidation)
-fullName.addEventListener("keyup", enableButton);
-email.addEventListener("keyup", enableButton);
-address.addEventListener("keyup", enableButton);
-subject.addEventListener("keyup", enableButton);
+// fullName.addEventListener("keyup", enableButton);
+// email.addEventListener("keyup", enableButton);
+// address.addEventListener("keyup", enableButton);
+// subject.addEventListener("keyup", enableButton);
 
 function checkLength (value, letters) {
     if (value.trim().length > letters) {
@@ -33,25 +33,25 @@ function checkEmail (email) {
 }
 
 
-function enableButton() {
-    if (checkLength(fullName.value, 3) && checkLength(address.value, 1) && checkEmail(email.value) && checkLength(subject.value, 20)) {
-        button.disabled = false;
-    } else {
-        button.disabled = true;
-    }
-}
+// function enableButton() {
+//     if (checkLength(fullName.value, 1) && checkLength(address.value, 25) && checkEmail(email.value) && checkLength(subject.value, 10)) {
+//         button.disabled = false;
+//     } else {
+//         button.disabled = true;
+//     }
+// }
 
 
 function formValidation(event) {
     event.preventDefault();
 
-    if (checkLength(fullName.value, 3) === true) {
+    if (checkLength(fullName.value, 1) === true) {
         fullNameError.style.display = "none";
     } else {
         fullNameError.style.display = "block";
     }
 
-    if (checkLength(address.value, 1) === true) {
+    if (checkLength(address.value, 25) === true) {
         addressError.style.display = "none";
     } else {
         addressError.style.display = "block";
@@ -63,13 +63,13 @@ function formValidation(event) {
         emailError.style.display = "block";
     }
 
-    if (checkLength(subject.value, 20) === true) {
+    if (checkLength(subject.value, 10) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
     }
         
-    if (checkLength(fullName.value, 3) && checkLength(address.value, 1) && checkEmail(email.value) && checkLength(subject.value, 20)) {
+    if (checkLength(fullName.value, 1) && checkLength(address.value, 25) && checkEmail(email.value) && checkLength(subject.value, 10)) {
         success.style.display = "block";
     } else {
         success.style.display = "none";

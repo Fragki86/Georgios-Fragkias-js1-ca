@@ -1,6 +1,6 @@
 /* -------------------------- Global --------------------------------*/
 :root {
-    --purple: rgb(55,0,58);
+    --purple: rgb(93, 61, 95);
 }
 
 html { 
@@ -25,6 +25,7 @@ body {
 
 nav {
     width: 25%;
+    min-width: 200px;
     margin: auto auto;
     background-color: white;
     border-radius: 10px;
@@ -69,9 +70,10 @@ nav a {
     width: 170px;
     height: 170px;
     display: block;
-    background-color: white;
+    background: radial-gradient(circle 90px, #ffffff, #dddada);
+    box-shadow: 0px 0px 12px  white;
     border-radius: 170px;
-    border: solid 3px silver;
+    border: solid 1px silver;
     text-decoration: none;
 }
 
@@ -79,11 +81,13 @@ nav a {
     text-align: center;
     margin: 5px auto 8px auto;
     padding-top: 5px;
+    color: var(--purple);
 }
 
 .divs-index p {
     text-align: center;
     margin: 5px auto 8px auto;
+    color: var(--purple);
     
 }
 
@@ -100,56 +104,78 @@ nav a {
 /* -------------------------- Contact --------------------------------*/
 
 form {
-    width: 60%;
-    background-color: rgb(235, 231, 231);
+    width: 50%;
+    background-color: rgb(248, 244, 250);
     border-radius: 10px;
-    margin: 0px auto;
     padding: 30px;
+    margin-top: 20px;
+    position: absolute;
+    right: 180px;
 }
 
 form div {
     padding-bottom: 5px;
 }
 
+h3 {
+    color: var(--purple);
+}
 
 label {
     display: block;
     font-weight: 600;
     font-size: 0.9rem;
     padding-top: 10px;
+    color: var(--purple);
     
 }
 
 input {
     display: block;
-    border-radius: 3px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 40%;
+    border-radius: 10px;
+    background: rgb(241, 227, 255);
 }
+
 
 .form-error {
     display: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.6rem;
-    color: red;
+    color: rgb(211, 27, 27);
     padding-top: 1px;
 }
 
 button {
-    background-color: rgb(52, 91, 136);
-    color: white;
-    margin: 0px auto;
+    color: rgb(246, 242, 248);
+    background: var(--purple);
+    border-radius: 15px;
+    border: none;
+    margin: 20px auto;
+    width: 20%;
+    height: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
 }
 
-button:disabled {
-    color: black;
+button:hover {
+    background: rgb(115, 73, 121);
+    cursor: pointer;
 }
+
+/* button:disabled {
+    color: rgb(115, 91, 129);
+    background: rgb(199, 165, 231);
+    box-shadow: inset 0px 0px 10px;
+    border: solid 1px silver;
+} */
 
 #success-message {
     display: none;
     text-align: center;
-    width: 65%;
-    margin: 50px auto 15px auto;
-    padding: 10px;
+    width: 50%;
+    position: relative;
+    margin: 50px 190px 0px auto;
+    padding: 10px 30px 10px 30px;
     border-radius: 15px;
     background-color: rgb(54, 179, 54);
     color: white;
@@ -159,27 +185,44 @@ button:disabled {
 
 
 
-
+/* .loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
 
 
 
 .loader {
     display: block;
     margin: 100px auto;
-    border: 4px solid darkgrey;
-    border-radius: 10px;
-    width: 250px;
-    height: 100px;
+    border: 14px solid white;
+    border-top: 14px solid var(--purple);
+    border-bottom: 14px solid var(--purple);
+    border-radius: 250px;
+    width: 170px;
+    height: 170px;
     animation: fill 3s linear infinite;
 }
 
+
 @keyframes fill {
-    0% {top: 30px;
-        background-color: darkblue;}
-    100% {background-color: red;}
+    0% {background-color: rgb(50, 41, 54);
+            transform: rotate(0deg)}
+    100% {background-color: rgb(233, 221, 238);
+        transform: rotate(360deg)}
 }
 
 .loader p {
+    display: none;
   font-size: 3rem;
   color: white;
   margin: 20px 30px;

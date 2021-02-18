@@ -15,38 +15,40 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
-        <!-- <div class="loader">
-            <p>Loading...</p>
-        </div> -->
+    <div class="loader">
+        <p>Loading...</p>
+    </div>
         <div id="success-message">Your message is sent!!</div>
     <form id="contact-form" method="POST">
+        <h3>Send us your message in case you are wondering about something or you need extra information.</h3>
         <div>
-            <label>Full Name (minimum 3 characters)
+            <label>Full Name (required)
                 <input type="text" name="name" id="name">
             </label>
             <div class="form-error" id="nameError">Please enter a valid name</div>
         </div>
+        <div>
+            <label>Subject (minimum 10 characters)
+                <input type="textarea" name="subject" id="subject">
+            </label>
+            <div class="form-error" id="subjectError">Please add text</div>
+        </div>
         <div> 
-            <label>Email
+            <label>Email (required)
                 <input type="email" name="email" id="email">
             </label>
             <div class="form-error" id="emailError">Please enter an email address</div>
         </div>
         <div>
-            <label>Address
+            <label>Address (minimum 25 characters)
                 <input type="text" name="address" id="address">
             </label>
             <div class="form-error" id="addressError">Please enter an address</div>
         </div>
-        <div>
-            <label>Subject (minimum 20 characters)
-                <input type="text" name="subject" id="subject">
-            </label>
-            <div class="form-error" id="subjectError">Please add text</div>
-        </div>
-        <button disabled>Submit</button>
+        <button>Submit</button>
     </form>
+
+    
    
 
 
