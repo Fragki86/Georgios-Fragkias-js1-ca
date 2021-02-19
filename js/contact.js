@@ -12,10 +12,7 @@ const success = document.querySelector("#success-message");
 
 
 form.addEventListener("submit", formValidation)
-// fullName.addEventListener("keyup", enableButton);
-// email.addEventListener("keyup", enableButton);
-// address.addEventListener("keyup", enableButton);
-// subject.addEventListener("keyup", enableButton);
+
 
 function checkLength (value, letters) {
     if (value.trim().length > letters) {
@@ -32,14 +29,6 @@ function checkEmail (email) {
     return emailCheck
 }
 
-
-// function enableButton() {
-//     if (checkLength(fullName.value, 1) && checkLength(address.value, 25) && checkEmail(email.value) && checkLength(subject.value, 10)) {
-//         button.disabled = false;
-//     } else {
-//         button.disabled = true;
-//     }
-// }
 
 
 function formValidation(event) {

@@ -17,22 +17,8 @@ async function getPremierLeague() {
                                        <img class="badges" src="${teamInfo.strTeamBadge}"> 
                                        <p>Est: ${teamInfo.intFormedYear}</p>
                                     </a>`;
-
-                                    console.log(teamInfo.idTeam);
         });
-        console.log(allTeams)
-
-    // -- FOR LOOP solution
-    //   for (let i = 0; i < allTeams.length; i++) {
-    //         const teamName = allTeams[i].strTeam;
-    //         const badges = allTeams[i].strTeamBadge;
-    //         const foundationYear = allTeams[i].intFormedYear;
-    //         container.innerHTML += `< class="divs-index">
-    //                             <h4>${teamName}</h4>
-    //                             <img class="badges" src="${badges}"> 
-    //                             <p>Est: ${foundationYear}</p>
-    //                            </>`;
-    //   }
+        // console.log(allTeams)
     } catch(error) {
         console.log(error)
         container.innerHTML = "Something went wrong and we lost the ball..!!"

@@ -21,7 +21,7 @@ async function getTeamDetails() {
         const detailedInfo = await response.json();
     
         detailsContainer.innerHTML = "";
-        // console.log(detailedInfo.teams[0]);
+        console.log(detailedInfo.teams[0]);
         
 
         newDetails(detailedInfo);
@@ -49,8 +49,6 @@ function newDetails(detailedInfo) {
                                      <h2 class="h2-details">Description / History</h2>
                                      <p>${detailedInfo.teams[0].strDescriptionEN}</p>
                                    </div>`;
-
-
 
     const updatedTitle = document.querySelector("title")
 
