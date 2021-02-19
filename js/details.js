@@ -34,18 +34,21 @@ getTeamDetails();
 
 
 function newDetails(detailedInfo) {
-    detailsContainer.innerHTML = `<div class="div-details">
+    detailsContainer.innerHTML = `<div class="div-h1-badge">
                                     <img class="badges-details" src="${detailedInfo.teams[0].strTeamBadge}">
                                     <h1 class="h1-details">${detailedInfo.teams[0].strTeam}</h1>
-                                        <div class="stadium-jersey-grid">
-                                            <p><span class="stadium-span">Jersey</span></p>
-                                            <img class="jersey-img" src="${detailedInfo.teams[0].strTeamJersey}">
-                                            <p><span class="stadium-span">Stadium:</span> ${detailedInfo.teams[0].strStadium}, ${detailedInfo.teams[0].intStadiumCapacity} seats</p>
-                                            <img class="stadium-img" src="${detailedInfo.teams[0].strStadiumThumb}">
-                                        </div>
-                                    <h2 class="h2-details">Description / History</h2>
-                                    <p>${detailedInfo.teams[0].strDescriptionEN}</p>
-                                  </div>`;
+                                  </div>
+                                  <div class="div-details">
+                                      <div class="stadium-jersey-grid">
+                                        <h2 class="h2-details">Stadium</h2>
+                                        <img class="jersey-img" src="${detailedInfo.teams[0].strTeamJersey}">
+                                        <h2 class="h2-details">Jersey</h2>
+                                        <p>${detailedInfo.teams[0].strStadium}, ${detailedInfo.teams[0].intStadiumCapacity} seats</p>
+                                        <img class="stadium-img" src="${detailedInfo.teams[0].strStadiumThumb}">
+                                      </div>
+                                     <h2 class="h2-details">Description / History</h2>
+                                     <p>${detailedInfo.teams[0].strDescriptionEN}</p>
+                                   </div>`;
 
 
 
