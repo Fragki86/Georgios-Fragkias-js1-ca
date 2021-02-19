@@ -21,7 +21,7 @@ async function getTeamDetails() {
         const detailedInfo = await response.json();
     
         detailsContainer.innerHTML = "";
-        console.log(detailedInfo.teams[0]);
+        // console.log(detailedInfo.teams[0]);
         
 
         newDetails(detailedInfo);
@@ -59,5 +59,3 @@ function newDetails(detailedInfo) {
     }
     pageTitleUpdate();
 }
-
-console.dir(document)

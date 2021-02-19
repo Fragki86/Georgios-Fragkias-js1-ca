@@ -27,11 +27,11 @@ async function getPremierLeague() {
     //         const teamName = allTeams[i].strTeam;
     //         const badges = allTeams[i].strTeamBadge;
     //         const foundationYear = allTeams[i].intFormedYear;
-    //         container.innerHTML += `<div class="divs-index">
+    //         container.innerHTML += `< class="divs-index">
     //                             <h4>${teamName}</h4>
     //                             <img class="badges" src="${badges}"> 
     //                             <p>Est: ${foundationYear}</p>
-    //                            </div>`;
+    //                            </>`;
     //   }
     } catch(error) {
         console.log(error)
