@@ -2,7 +2,7 @@ const detailsContainer = document.querySelector(".details-container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
-
+console.log(queryString);
 
 const id = params.get("id");
 
